@@ -5,7 +5,7 @@
 {% block content %}
     <div class="full_recipe_card">
         <h1>{{ recipe.title}}</h1>
-        <img src="{{recipe.image.url}}" width="900" height="550" alt="фото блюда">
+        <img src="{{ MEDIA_URL }}{{recipe.image.url}}" width="900" height="550" alt="фото блюда">
         <h4>{{ recipe.description }}</h4>
         <h4>----------------------------------------------------</h4>
         <h3>Время приготовления ~ {{ recipe.time }}</h3>
