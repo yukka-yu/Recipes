@@ -2,27 +2,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# class CustomUser(AbstractUser):
-#     STATUSES = [
-#         ('beginner', 'beginner'),
-#         ('cook', 'cook'),
-#         ('chief-cooker', 'chief-cooker'),
-#     ]
-#     status = models.CharField(max_length=12, choices=STATUSES)
-#     fullname = models.CharField(blank=True, null=True, max_length=200)
-
-#     def save (self, *args, **kwargs) :    
-#         self.fullname = self.status + ' ' + self.first_name + ' ' + self.last_name
-#         return super().save(*args, **kwargs)
-    
-#     def __str__(self):
-#         return f'#{self.pk} {self.fullname} aka {self.username}'
-    
-    
-
-
 class CathegoryModel(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
 
     def __str__(self):
         return f'{self.title}'
