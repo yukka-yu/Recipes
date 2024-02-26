@@ -8,7 +8,7 @@
     {% for recipe in recipes %}
         <div class="recipe_card">
             <h3>{{recipe.title}}</h3>
-            <a class="more_link" href="http://127.0.0.1:8000/full_recipe/{{recipe.pk}}"><img width="500" height="330" src="{{ MEDIA_URL }}{{recipe.image.url}}"  alt="фото блюда" /></a>
+            <a class="more_link" href="{% url full_recipe recipe.pk %}"><img width="500" height="330" src="{{ MEDIA_URL }}{{recipe.image.url}}"  alt="фото блюда" /></a>
             <p>-------------------------------------------------------------------------------------------</p>
             <p>#{{recipe.pk}} {{recipe.description}} </p>
             
